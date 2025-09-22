@@ -133,8 +133,8 @@
 
 #10A user buys a T-shirt for $25 and a hat for $15. Calculate and print the total cost.
 
-t_shirt=int(input("t-shirt: "))
-hat = int(input("hat: "))
-print("Total cost:", t_shirt*25+hat*15,'$')
+#t_shirt=int(input("t-shirt: "))
+#hat = int(input("hat: "))
+#print("Total cost:", t_shirt*25+hat*15,'$')
 
 
