@@ -43,7 +43,7 @@ else :
     
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-BOOL
+-------------------------------------------------------------------------------------------BOOL
 1
 a = int(input())
 b = bool(a)
@@ -144,5 +144,119 @@ a = int(input())
 print(a%100*10+a//100)
 
 
-24 '''
+24 
+---------------------------------------------------------------------------------------------begin
+9 
 
+import math
+a = int(input())
+b = int(input())
+print(math.sqrt(a*b))
+
+13
+
+PI = 3.141509
+R1= float(input())
+R2 = float(input())
+print(PI*(R1*R1-R2*R2))
+
+17 
+a = int(input())
+b = int(input())
+c = int(input())
+BC = c-b
+AC = c-a
+print(BC, 'BC KESMA', AC ,'AC KESMA', BC+AC, 'YIG`INDI') 
+20 
+import math
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+S = math.sqrt(abs(x1-x2)**2 + abs(y1-y2)**2)
+print(S) ********************************************************************************************************************
+
+x = int(input())
+y = int(input())
+x1 = int(input())
+y1 = int(input())
+if(x == x1 or y == y1) : 
+    print("Bo`ladi")
+else : 
+    print("Bo`maydi")
+    
+    
+
+
+c = 39
+while True : 
+    a = int(input())
+    b= int(input())
+    print("Guess what : ")
+    num = input())
+    if c > num :
+        print("Higher than this")
+    elif c < num: 
+        print("Lower than yours ")
+    else :
+        print(" Right " )
+        break
+    
+    
+string = input("matn : ")
+karakter = input("char : ")
+i = 0
+cnt = 0
+while i<len(string): 
+    
+    if string[i] == karakter :
+        i=i+1
+        cnt = cnt+1
+print(cnt)
+        
+        
+otni yurishi
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+  
+ox = abs(x1-x2)
+oy = abs(y1-y2)
+res = (ox ** 2 + oy ** 2 == 2 or ox ** 2 + oy ** 2 == 1) and (ox ** 2 + oy **2 != 0)
+print(res)
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+ox = x1-x2
+oy = y1-y2
+yig = ox ** 2 + oy ** 2 
+print(yig == 1 or yig == 2) and (yig != 0)
+
+
+a = input()
+i = 0
+while i < len(a):
+    if ord(a)+3>90 :
+        a = chr(ord(a)-26)
+    else : 
+        a = chr(ord(a)+3)
+    
+print(chr(ord(a)+ 3))
+   
+n = input()
+i = 0
+sum = 0
+son = int(n)
+while i < len(n) :
+    i=i+1
+    sum = sum + son%10
+    son = (son)//10
+print(sum) '''
+    
+    
+    
