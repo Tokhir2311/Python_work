@@ -258,5 +258,21 @@ while i < len(n) :
     son = (son)//10
 print(sum) '''
     
-    
-    
+
+
+
+
+
+
+#n = int(input())
+
+n=10
+sl = list()
+while n > 3:
+   s = n//3
+   sl.append(s)
+cnt = 0
+for i in sl:
+    cnt +=i
+print(cnt)
+
