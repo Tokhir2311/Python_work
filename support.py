@@ -83,16 +83,134 @@ def digcnt(son):
         cnt +=1
     return cnt
 print(digcnt(123456))
- '''  
+   
  
  
-def isprm(son):
-    for i in range(2,int(son**0.5)+1,1):
+def isprm(son)->bool:
+    for i in range(2,int(son**0.5)+1):
         if son%i==0:
-            return False
-print(isprm(3))
+            return  False
+    return True
+print(isprm(21))
+
+
+def greet()->str:
+    print("Hello")
+    
+var = greet
+
+print(var())
+
+def add(a, b):
+    return a + b
+def subt(a, b):
+    return a-b
+op = [add, subt]
+
+for i in op:
+    print(i(12, 11))
+  
+def add(a, b):
+    return a + b
+def subt(a, b):
+    return a-b
+def mul(a, b):
+    return a*b
+    
+oper = input("Enter operation: (add , sub, mul) ")   
+op = {"add":add, "sub":subt, "mul":mul}
+a = int(input("a = "))
+b = int(input("b = "))
+print(op[oper](a, b))
+
+v = int(input("son : "))
+#def sqrr(val):
+#   return val**2
+    
+def apply(funk, v):
+    return funk(v)
+print(apply(lambda x : x*x, v))   #lambda shu yerga yozilsun 
+
+
+def mainfunk(funk, a, b):
+    return funk(a, b)
+    
+print(mainfunk(lambda x, y : x**y, 3, 4))
+
+
+
+nums = [1, 2, 3, 4, 5]
+
+def sqrr(val):
+    for i in range(5):     CHALAAAAAAAAAAAAAAAAAAAA
+        print(lambda val: val**2)
+print(sqrr( 5))
+   
+ 
+    
+    
+lmbs = (
+lambda y: y.upper(),
+lambda y: y.lower(),
+lambda y: y.title()
+)
+
+for i in lmbs:
+    print(i("python"))
+    
+
+
+tup = (
+lambda x: x+5, 
+lambda x : x+10,
+lambda x : x+15
+)
+
+def taker():
+    for i in tup:
+        print(i(20))
+
+taker()
+
+
+def choose(i: bool, x, f1, f2):
+    if i == True:
+        return f1(x)
+    elif i ==False:
+        return f2(x)
+
+
+print(choose(False, 20, lambda x: x+10, lambda x : x-10 ))
+
+def funk_s(n):
+    if n == "sq":
+        return lambda x : x*2
+    elif n == "db":
+        return lambda x : x**2
+    elif n == "cube":
+        return lambda x : x**3
+
+funk = funk_s("db")
+print(funk(3))
+''' 
+
+def funk_s(n, nums):
+    if n == "even":
+        for i in nums:
+            return lambda x : x%2==0
+    elif n == "odd":
+        for i in nums:
+            return lambda x : x%2==1
+
+funk = funk_s("odd", [1, 2, 3, 4, 5])
+
+
+print(funk)
 
 
 
 
-            
+
+
+
+
