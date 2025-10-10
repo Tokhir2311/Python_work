@@ -256,7 +256,7 @@ while i < len(n) :
     i=i+1
     sum = sum + son%10
     son = (son)//10
-print(sum) '''
+print(sum) 
     
 
 
@@ -275,4 +275,21 @@ cnt = 0
 for i in sl:
     cnt +=i
 print(cnt)
+
+
+#funk3_6
+def safe_divide(a, b):
+    return a//b
+    
+def error_handler(a, b):
+    return "False"
+
+def run_ifsafe(func, handler, a, b):
+    if (b!=0):
+        return  func(a, b)
+    else :
+        return handler()
+     
+print(run_ifsafe(safe_divide, error_handler, 4, 2))'''
+
 
