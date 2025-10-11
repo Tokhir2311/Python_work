@@ -93,6 +93,7 @@ def isprm(son)->bool:
     return True
 print(isprm(21))
 
+==============================================================================================================.smd3 I think
 
 def greet()->str:
     print("Hello")
@@ -183,7 +184,7 @@ def choose(i: bool, x, f1, f2):
 print(choose(False, 20, lambda x: x+10, lambda x : x-10 ))
 
 def funk_s(n):
-    if n == "sq":
+    if n == "sq":                        <-----13
         return lambda x : x*2
     elif n == "db":
         return lambda x : x**2
@@ -192,7 +193,7 @@ def funk_s(n):
 
 funk = funk_s("db")
 print(funk(3))
-''' 
+ 
 
 def funk_s(n, nums):
     if n == "even":
@@ -207,10 +208,97 @@ funk = funk_s("odd", [1, 2, 3, 4, 5])
 
 print(funk)
 
+15
+
+def ret(strin):
+    for i in "aoeui":
+        if strin[0] == i:
+            return lambda x: x + " your str"
+        return lambda x: x + " your str not vowel"
+
+idonno = ret("salom")
+print(idonno("assalom"))
+
+
+
+16 
+
+names = ['ali', 'vali', 'eshmat']
+
+def trans(s):
+    return s.upper()
+    
+def fun(f, l):
+    s = []
+    for i in l:
+        s.append(f(i))
+    return s
+    
+print(fun(trans, names))
 
 
 
 
+17
+def con_ap(f1t, f2f, num):
+    if num %2==0:
+        return f1t
+    return f2f
+    
+print(lambda x : x**2, lambda x : x**3, 3)
+
+
+18
+
+20
+def ch_op(sym):
+    if sym == "+":
+        s = lambda x: x+x
+    elif sym == "-":
+        s = lambda x: x-x
+    elif sym == "*":
+        s = lambda x: x*x
+    elif sym == "/":
+        s = lambda x: x//x
+    return s
+k = ch_op('*')
+print(k(5))
+
+ 
+
+31
+
+s = lambda x : print('even') if x%2==0 else print('odd')
+print(s(4))
+
+32
+
+names = ['ali', 'vali', 'eshmat', "kimdir"]
+
+prin = filter(lambda x: if i in x[0] == "aouie")
 
 
 
+41
+def make_p(n):
+    return lambda x: x**n
+    
+res = make_p(3)
+print(res(3))
+    '''
+Listf = [
+lambda x : x+1,
+lambda x : x+2,
+lambda x : x+3,
+lambda x : x+4]
+def main_f(f):
+    s = []
+    for i in Listf:
+        s.uppend(i(val))
+    return s
+    
+res= main_f(f2)
+print(res(3))
+    
+    
+    
