@@ -264,8 +264,19 @@ def ch_op(sym):
 k = ch_op('*')
 print(k(5))
 
- 
+ 21
+words = ['vali', 'ali', 'eshmat', 'buuzunsoz']
 
+sorted_list = sorted(words, key=lambda x : len(x))
+print(sorted_list)
+ 
+ 22'''
+ 
+l = [('ali', 20), ("vali", 19), ("akmal", 22)]
+l_sorted = sorted(l, key=lambda x : min(x))
+print(l_sorted)
+ 
+'''
 31
 
 s = lambda x : print('even') if x%2==0 else print('odd')
@@ -285,7 +296,8 @@ def make_p(n):
     
 res = make_p(3)
 print(res(3))
-    '''
+
+    42
 Listf = [
 lambda x : x+1,
 lambda x : x+2,
@@ -299,6 +311,9 @@ def main_f(f):
     
 res= main_f(f2)
 print(res(3))
+    '''
     
+43 
+
     
     
