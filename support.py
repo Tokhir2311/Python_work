@@ -249,6 +249,16 @@ print(lambda x : x**2, lambda x : x**3, 3)
 
 
 18
+19 
+
+def repeat(f: Callable, n: int):
+    for i in range(1, n+1)
+        return f
+
+print(repeat(lambda x: x+2, 3))
+
+
+
 
 20
 def ch_op(sym):
@@ -270,13 +280,14 @@ words = ['vali', 'ali', 'eshmat', 'buuzunsoz']
 sorted_list = sorted(words, key=lambda x : len(x))
 print(sorted_list)
  
- 22'''
+ 22
  
 l = [('ali', 20), ("vali", 19), ("akmal", 22)]
 l_sorted = sorted(l, key=lambda x : min(x))
 print(l_sorted)
  
-'''
+ 
+ 
 31
 
 s = lambda x : print('even') if x%2==0 else print('odd')
@@ -311,9 +322,29 @@ def main_f(f):
     
 res= main_f(f2)
 print(res(3))
-    '''
-    
-43 
 
+from typing import Callable
+def kool():
+    return "Hello"
+def repeat(f: Callable, n: int):
+    for i in range(1, n+1):
+        f(3)
+
+print(repeat(kool(), 3))
+    '''
+
+
+Listf = [
+lambda x : x+1,
+lambda x : x+2,
+lambda x : x+3,
+lambda x : x+4]
+def main_f(f):
+    s = []
+    for i in Listf:
+        s.uppend(i(val))
+    return s
     
+res= main_f(f2)
+print(res(3))    
     
