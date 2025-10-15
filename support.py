@@ -331,7 +331,7 @@ def repeat(f: Callable, n: int):
         f(3)
 
 print(repeat(kool(), 3))
-    '''
+   
 
 
 Listf = [
@@ -348,3 +348,226 @@ def main_f(f):
 res= main_f(f2)
 print(res(3))    
     
+     
+     
+def main(funk):
+    def wrap(*args, **kwargs):
+        print("starting...")
+        funk()
+        print("we are done here!")
+    return wrap
+@main  
+def map_info():
+    print("Yunusobod, osiyo street, 1")
+    
+map_info() 
+
+
+def main(funk):
+    cnt = 0
+    def wrap(*args, **kwargs):
+        nonlocal cnt
+        funk()
+        cnt +=1
+        print(cnt, "martta")
+    return wrap
+@main  
+def map_info():
+    print("hello")
+    
+map_info()
+map_info()
+map_info() 
+
+
+
+
+
+def main(funk):
+    def wrap(*args, **kwargs):
+        print(funk.__name__)
+        funk()
+    return wrap
+@main    
+def map_info():
+    print("hello")   
+    
+map_info()
+  
+    
+def main(funk):
+    def wrap(*args, **kwargs):
+        return funk().upper()
+    return wrap
+@main    
+def map_info():
+    return ("hello")     
+print(map_info())
+    
+    
+    #Javoxirniki 5 sinf 
+    
+from typing import Callable
+
+def decorator(func: Callable):
+    def wrapper(string):
+        if string:
+            print(string.upper())
+
+        func(string)  #return 
+    return wrapper
+
+@decorator
+def myfunc(n):
+    return f"{n}"
+
+myfunc("Hello Javohir")
+  
+  8
+def main(funk):
+    def wrap(*args, **kwargs):
+        
+        for i in args:
+            print(type(i))
+            funk()
+    return wrap
+        
+        
+@main
+def funksiya(*k):
+    return k
+
+funksiya(12, 3.4, True)
+
+ustoz yozdi 
+
+def dec(f):
+    def wrp(*arg, **kwarg):
+        for i in arg:
+            print(type(i))
+        for k in kwarg.values():
+            print(type(k))
+        f()
+    return wrp
+    
+@dec
+def myf(*arg, **kwarg):
+    return arg
+    
+myf(1, 2, "s")
+
+
+ 9
+def main(fun):
+    def wrp():
+        for i in range(3):
+            fun()
+    return wrp
+    
+@main
+def sayer():
+    print("Hello Ehsmat")
+    
+sayer()
+10 
+def main(fun):
+    def wrp():
+    if return fun == None:
+        print("No res")
+    else :
+        return fun
+    return wrp
+    
+@main
+def hi():
+    return 
+    
+hi()
+
+11 
+def main(fun):
+    def wrp(*arg):
+        l = []
+        for i in arg:
+            if i%2==0:
+                l.append(i)
+            else : 
+                "Odd numbers prohibited"
+            func(*tuple(l))
+    return wrp
+    
+@main
+def add(*arg):
+    print(arg)
+    
+add(12, 13, 15, 100)
+
+
+
+def main(fun):
+    def wrp():
+        if fun() is None:
+            return "No res"
+        else :
+            return fun()
+        return fun()
+    return wrp
+    
+@main
+def hi():
+    return None
+    
+print(hi())
+
+
+12
+
+def main(f):
+    def wrp(l : list):
+        t = set(l)
+        f(t)
+    return wrp
+    
+@main 
+def myf(s:list):
+    print(s)
+    
+myf([1, 2, 3,3,1, 4,5])
+
+
+def decorator(func:Callable):
+    def wrapper(*args,**kwargs):
+     l=[]
+     for i in args:
+         if isinstance(i,str):
+            l.append(i.lower())
+     return func(*tuple(l))     
+               
+    return wrapper
+@decorator
+def f(*n):
+    return n
+print(f("ASsror","GIU"))
+'''
+
+def decorator(fun):
+    def wrapper(*args,**kwargs):
+        if fun.count>5:
+            return None
+        return fun()
+    return wrapper
+        
+        
+        
+        
+@decorator
+def my():
+    print("hi")
+    
+my()
+my()
+my()
+my()
+my()
+my()
+
