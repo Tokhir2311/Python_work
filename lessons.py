@@ -175,4 +175,146 @@ def funksiya(*args, **kwargs):
 funksiya((1, 2, 4, 3, 7, 4))
 '''
 
+"""Create a decorator that counts how many elements in a list argument satisfy a certain condition (eg even numbers).
+    
+    Write a decorator that removes None values from list arguments before calling the function.
+    Write a decorator that reverses all string arguments passed to the function.
+    Create a decorator that multiplies a numeric return value by 10.
+    Write a decorator that wraps a function’s string result in parentheses.
+    Write a decorator that converts a function’s return type:
+    if list → tuple if tuple → list
+    Create a decorator that joins the characters of a string return value with -.
+    Write a decorator that returns a sorted version of any iterable returned by the function.
+    Write a decorator that applies a given lambda to every element of a list returned by the function.
+    Write a decorator that adds "Hello, " before and "!" after a string return value.
+    Write a decorator that doubles each element in a list returned by the function.
+    Write a decorator that converts a dictionary’s values to uppercase if they are strings.
+    Create a decorator that, when the function returns a list of numbers, filters out the odd ones 
+    
+17
 
+def decorator(funk):
+    def wrp(*args, **kwargs):
+        funk()
+        cnt = 0 
+        for i in args:
+            if i %2 ==0:
+                cnt +=1
+        print(cnt) 
+    return wrp
+        
+@decorator         
+def mainf(*args, **kwargs):
+    print(args)
+    
+mainf([1, 2, 3, 4 ,5])
+
+
+def dec(fun):
+    def wrp(*args):
+        for i in args:
+            if i is None:
+                return False
+            else : 
+                return fun()
+    return wrp 
+
+
+@dec 
+def main(*arg):
+    print(arg)
+
+main([], [1, 2,3],())
+
+
+
+#Create a decorator that multiplies a numeric return value by 10.
+
+def dec(funk):
+    def wrp():
+        return res * 10
+        
+    return wrp
+@dec 
+def main():
+    print(10)
+    
+main()
+=======================================================================================================
+                    TRY EXCEPT 
+=======================================================================================================
+1 
+try:
+    a = int(input("a ni :"))
+    b = int(input("b ni :"))
+    print(a/b)
+except ZeroDivisionError:
+    print("Nolga bo`la olmaysiz")
+except ValueError:
+    print("Son turida muammo bor") 
+
+
+2 
+try:
+    ls = map(list(int, input()))
+    def main(ls):
+        for i in ls:                            CHALAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            print(i**(-1))
+        return main
+except ValueError:
+    print("Nol mumkinmas")
+
+
+
+def invert(l:list):
+    res=[]
+    for i in range(0, len(l)):
+        try:
+            res.append(l[i]**(-1))
+        except ZeroDivisionError:
+            print(f"l[{i}] = 0 ekan, chopdim!")
+            continue
+    return res
+print(invert([1, 2, 3, 4, 5]))
+print(invert([1, 0, 3, 4, 5]))
+
+4 
+def invert(l:list):
+    res=[]
+    for i in l:
+        if i :
+            try:
+                res.append(int(i))
+                continue
+            except ValueError:
+                print(f"string ekan")
+                continue
+    return res
+print(invert(["1", "2", "stringcha", "4"]))
+
+
+5 
+while True:
+    try:
+        a = int(input("Son kiriting "))
+        print(f"Son = {a}")
+        break
+    except ValueError:
+        print("Xatolik")
+
+"""
+
+def dec(fun):
+    def wrp():
+        try:
+            for i in range(3):
+                print(f"{i} chi urinish")
+                fun()
+        except ZeroDivisionError:
+            print("Xatolik")
+        
+@dec
+def main(a:int, b:int):
+    print(a/b)
+    
+main()
