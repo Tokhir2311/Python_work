@@ -543,10 +543,53 @@ from pathlib import Path
 
 
 Path.write_text( Path("./Yangi_fayl.txt"),"hello world")
-"""
+
 from pathlib import Path 
 
 for path in Path.iterdir(Path("../Python_work")):
     print(path)
+
+
+
+
+
+=======================================================================================================
+                                            O O P
+=======================================================================================================
+
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    def __str__(self):
+        return f"brand = {self.brand}, model = {self.model}"
+my_car1 = Car(
+    brand = 'bmw',
+    model = "bmw4 competition"
+)
+
+    
+my_car2 = Car(
+    brand = "chevrolet",
+    model = "spark"
+)
+
+
+print(my_car1,"\n", my_car2) 
+
+"""
+class Humankind: 
+    def __init__(self,name, age):
+        self.name = name
+        self.age = age
+    def __str__(self):
+        return f"Ismi {self.name}, yoshi esa {self.age}"
+        
+odam1 = Humankind(name = "Eshmat",age = 12)
+
+odam2 = Humankind(name = "Ali", age = 55)
+
+print(odam1,"\n", odam2)
 
 
