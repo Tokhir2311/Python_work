@@ -641,7 +641,7 @@ for k, val in stds.items():
 print(f.read())
 f.close() 
 
-'''
+
 
 25 
 f = open("Yangi_fayl.txt", "w+")
@@ -655,8 +655,91 @@ f.write(res)
 f.close() 
 
 
+=====================================================================================
+                                                        OOP                            
+===============================================================================================
 
 
+14 
 
+class Book:
+
+    def __init__(self,title, auth):
+        self.title = title
+        self.auth = auth
+    
+    def __str__(self):
+        return f"<{self.title}> by <{self.auth}>"
+    
+book1 = Book("Days gone by", "A.Qodiriy")
+
+
+print(book1)
+
+
+15 
+
+class Person:
+
+    def __init__(self,name, age):
+        self.name = name
+        self.age = age
+    
+    def __str__(self):
+        return f"<{self.name}> by <{self.age}>"
+    def __repr__
+book1 = Book("Days gone by", "A.Qodiriy")
+
+
+17
+
+class Bank:
+
+    def __init__(self,owner, balance):
+        self.owner = owner
+        self.balance = balance
+    
+    def __str__(self):
+        return f"Owner is <{self.owner}>, and balance is <{self.balance}$>"
+    
+user = Bank("Eshmat", 12000)
+
+print(user)
+
+18/19
+
+class School:
+    school = "Greenwood High"
+    def __init__(self,student,Gpa):
+        self.student = student
+        self.Gpa = Gpa
+    def __str__(self):
+        return f"student name {self.student}, Gpa {self.Gpa}"
+std = School("eshmat", 4.7)
+
+std1 = School("toshmat", 4.5)
+
+print(std, std1, std.school)
+
+
+20
+'''
+class School:
+    school = "Greenwood High"
+    def __init__(self,student,Gpa):
+        self.student = student
+        self.Gpa = Gpa
+    def __str__(self):
+        return f"student name {self.student}, Gpa {self.Gpa}"
+std = School("eshmat", 4.7)
+
+std1 = School("toshmat", 4.5)
+
+print(std, std1, std.school)
+
+School.school = "Hogward wizards"
+
+
+print(std, std1, std.school)
 
 

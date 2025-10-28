@@ -578,7 +578,7 @@ my_car2 = Car(
 
 print(my_car1,"\n", my_car2) 
 
-"""
+
 class Humankind: 
     def __init__(self,name, age):
         self.name = name
@@ -593,3 +593,62 @@ odam2 = Humankind(name = "Ali", age = 55)
 print(odam1,"\n", odam2)
 
 
+class Book:
+    def __init__(self, name, auth):
+        self.name = name
+        self.auth = auth
+        
+    def __str__(self):
+        return f"name {self.name}, auth {self.auth}"
+        
+        
+    @classmethod
+    def unknown(cls):
+        return cls("Unknown", "unknown")
+        
+        
+        
+book1 = Book("kitob1", "auth1")
+book2 = Book("kitob2", "auth2")
+
+print(book1, book2)
+
+print(Book.unknown())
+
+
+class Soon:
+    def __init__(self, son):
+        self.son = son
+        
+    def __str__(self):
+        return 
+        
+"""
+        
+        
+class Cat:
+    def __init__(self, name):
+        self.name = name
+        
+        
+class Dog :
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return f"{self.name}"
+ 
+ 
+dog = Dog("Bobik") 
+
+print(dog)
+print(isinstance(dog, Dog))
+        
+        
+ 
+ 
+ 
+ 
+ 
+        
+        
+        
