@@ -623,7 +623,7 @@ class Soon:
     def __str__(self):
         return 
         
-"""
+
         
         
 class Cat:
@@ -643,7 +643,10 @@ dog = Dog("Bobik")
 print(dog)
 print(isinstance(dog, Dog))
         
-        
+"""
+
+
+class J 
  
  
  
