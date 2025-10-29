@@ -891,8 +891,183 @@ from pathlib import Path
 
 Path.mkdir("./temp_file")
 
-'''
 
 from pathlib import Path  
 
 Path.write_text("temp_file/greet.txt", "hello ")
+
+
+
+
+class Birthday:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+     
+    def __str__(self):
+        return f"{self.name} - {self.age}"
+        
+        
+    @classmethod 
+    def newborn(cls, name):
+        return cls(name, age = 0)
+        
+p = Birthday("Ali", 10)
+
+baby = Birthday.newborn("Akbar")
+
+print(p, baby)
+
+
+class Color:
+    def __init__(self, sonr, son2r, son3r):
+        self.sonr = sonr    
+        self.son2r = son2r
+        self.son3r = son3r
+    
+    
+    def __str__(self):
+        return f"{self.sonr}, {self.son2r}, {self.son3r}"
+    
+    @classmethod
+    def color_maker(cls):
+        import random
+        
+        sonr = random.randint(0, 255)
+        son2r = random.randint(0, 255)
+        son3r = random.randint(0, 255)
+        
+        return cls(sonr, son2r, son3r)
+rang = Color(255, 255, 0)
+
+rangran  = Color.color_maker()
+
+print(rang, rangran)
+
+class Area:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def __str__(self):
+        return f"{self.x}, {self.y}"
+        
+    @classmethod
+    def sqrr(cls, v):
+        return cls(v, v)
+        
+uy1 = Area(5, 4)
+kv_uy = Area.sqrr(7)
+
+print(uy1, kv_uy)
+
+
+
+
+
+
+class Game_level:
+    def __init__(self, x, y, lev):
+        self.x = x
+        self.y = y
+        self.lev = lev
+        
+    def __str__(self):
+        return f"Ovoz - {self.x}, Round - {self.y}, Qiyinlik - {self.lev}"
+        
+    @classmethod
+    def def_game(cls):
+        return cls(x = 67, y=0, lev="easy")
+        
+        
+default = Game_level(77, 3, "medium")
+Sozlangan = Game_level.def_game()
+
+print(default, Sozlangan)
+
+
+class Fruits:
+    def __init__(self, meva):
+        self.meva = meva
+        
+        
+        fruits=["olma", "nok", "banan", "behi", "anjir"]
+    
+        fruits.append(self.meva)
+                                                                             ?
+                                                                             ?
+                                                                             ?/
+                                                                             
+                                                                             ???????????????????????
+    def __str__(self):
+        return f"{Fruits}"
+        
+        
+    @classmethod
+    def frt(cls):
+        return cls("meva", "meva2")
+        
+        
+p = Fruits("tarvuz")
+p1 = Fruits.frt
+
+print(p, p1)
+
+
+
+
+class Std:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+    
+    def __str__(self):
+        return f"{self.name}, {self.grade}"
+        
+        
+        
+    @classmethod
+    def std(cls, dik):
+        name = dik.get("name", "topilmadi")
+        grade = dik.get("grade", "yoshi yo`q")
+    
+        return cls(name, grade)
+p = Std("Javohir", 79)
+fp = Std.std({"name":"ali", "grade":89})
+
+print(p,"\n", fp)
+
+
+
+
+class Person:
+    def check_em(email):
+        if "@" in  email:
+            return True
+        return False
+print(Person.check_em("any@gmail.com"))
+
+
+
+class Temp:
+    def convert(cels):
+        return int(cels)*1.8 + 32
+
+print(Temp.convert(12),"*C" ) 
+
+'''
+
+class Trang:
+    def check_trang(a, b, c):
+        if a + b > c and b + c > a and c + a > b:
+            return True
+        return False
+        
+print(Trang.check_trang(3, 4, 17))
+
+
+
+
+
+
+
