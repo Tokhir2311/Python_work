@@ -643,15 +643,53 @@ dog = Dog("Bobik")
 print(dog)
 print(isinstance(dog, Dog))
         
+
+
+====================================================================================================
+                    INHERITANCE
+=====================================================================================================
+
+
+class Animal:
+    def __init__(self, ovoz):
+        self.ovoz = ovoz
+    def speak(self):
+        return f"{self.ovoz}  bu ovoz."
+ 
+class Dog(Animal):
+    def speak(self):
+        print("woow")                                                                     ??????????????
+class Cat(Animal):                                          ////////?????????????????
+    def speak(self):
+        print("miov")
+ 
+ 
+        
+print(dog1 = Dog("wow-wow"))
+print(cat1 = Cat("miyav-miyov"))
+ 
+ class Vehicle:
+    def __init__(self, name, brand, color):
+        self.name = name
+        
+        CHALAAAAAAAAAAAAAAAAAAA
+        
+        
+        
 """
 
-
-class J 
- 
- 
- 
- 
- 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
