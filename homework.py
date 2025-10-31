@@ -948,7 +948,7 @@ sqr = Square(3)
 print(circ.area())
 print(sqr.area())
 
-20_ex '''
+20_ex 
 
 class Device:
     def status(self):
@@ -966,3 +966,148 @@ vivo = Laptop()
 
 redmi.status()
 vivo.status()
+
+21_ex 
+
+
+class  Flyer:
+    def move(self):
+        print("Flying..")
+class Swimmer:
+    def move(self):
+        print("Swimming..")
+
+class Duck(Swimmer, Flyer): # class can get first classes method
+    pass
+
+duck = Duck()
+duck.move()   # It depends the order of class`s parent class`s  
+
+
+23_ex
+
+class Dog:
+    def sound(self):
+        print("woow, woow")
+
+class Cat:
+    def sound(self):
+        print("miauv, miauv")
+
+class Dat(Dog, Cat):
+    pass
+
+print(Dat.__mro__)
+ 
+24_ex
+
+class Logabe:
+    def log(self):
+        print("Logging...")
+
+class Database:
+    def saver(self):
+        print("saving...")
+
+class LogBase(Logabe, Database):
+    def __init__(self):
+        super().__init__()
+f = LogBase()
+f.log()
+f.saver()
+# bith of them working......
+
+
+25_ex
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+    def nam(self):
+        return self.name.lower()
+class Mammal:
+    def __init__(self, name):
+        self.name = name
+    def nam(self):
+        return self.name.upper()
+    
+class Mamont(Mammal, Animal):
+    def __init__(self, name):
+        super().__init__(name)
+
+fil = Mamont("FIlcha")
+
+print(fil.nam())
+
+#again it depends the order that given in third class`s parenthses
+
+26_ex
+
+class A:
+    def msg(self):
+        print(f"This is {self.__class__.__name__} class")
+
+class B(A):
+    def msg(self):
+        print(f"This is {self.__class__.__name__} class")
+
+class C(A):
+    def msg(self):
+        print(f"This is {self.__class__.__name__} class")
+
+class D(B, C):
+    pass
+
+print(D.__mro__)  
+
+27_ex_v1
+
+class A:
+    def msg(self):
+        print(f"This is A class")
+
+class B(A):
+    def msg(self):
+        print(f"This is B class")
+
+class C(A):
+    def msg(self):
+        print(f"This is C class")
+
+class D(B, C):
+    pass
+
+
+d = D()
+
+d.msg()
+
+27_ex_v2
+
+class A:
+    def msg(self):
+        print(f"This is {self.__class__.__name__} class")
+
+class B(A):
+    def msg(self):
+        print(f"This is {self.__class__.__name__} class")
+
+class C(A):
+    def msg(self):
+        print(f"This is {self.__class__.__name__} class")
+
+class D(B, C):
+    pass
+
+d = D()
+b = B()
+c = C()
+d.msg()
+c.msg()
+b.msg()
+
+
+
+28_ex '''
+
