@@ -723,7 +723,7 @@ print(std, std1, std.school)
 
 
 20
-'''
+
 class School:
     school = "Greenwood High"
     def __init__(self,student,Gpa):
@@ -738,8 +738,231 @@ std1 = School("toshmat", 4.5)
 print(std, std1, std.school)
 
 School.school = "Hogward wizards"
-
-
 print(std, std1, std.school)
 
-print("it worked")
+
+
+
+#   INHERITANCE   |||  POLYMORPHISM   |||  ENCAPSULATION   |||
+
+6_ex 
+
+class Dog:
+    def __init__(self,name, age):
+        self.name = name
+        self.age = age
+    def __str__(self):
+        return f"name : {self.name}, age : {self.age}"
+    
+    def speed(self):
+        return "35 km/h "
+    
+class Xachiko(Dog):
+    pass
+dog1 = Xachiko("dogie", 2)
+
+print(dog1)
+
+
+7/8_ex
+
+class Vehicle:
+    def sound(ovoz: str):
+        return "sound is here"
+    
+
+class Car(Vehicle):
+    def sound(ovoz):
+        return f"{ovoz}"
+    
+class Helicopter(Vehicle):
+    def sound(ovoz):
+        return f"{ovoz}"
+
+print(Helicopter.sound("tftfttftffff"))
+print(Car.sound("vmmmmmmmmmmmmm......"))
+
+
+9_ex
+
+class Appliance:
+    def __init__(self, brand):
+        self.brand = brand
+
+
+class Wash_machine(Appliance):
+    def __init__(self, brand, capacity):
+        self.capacity = capacity
+        super().__init__(brand)
+
+Bosch = Wash_machine("bosch", 220)
+
+print(Bosch.capacity)
+
+
+
+10_ex
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+        return f"Name: {self.name}"
+    def __str__(self):
+        return f"Name : {self.name}"
+
+class Employee(Person):
+    def __init__(self, name, salary):
+        self.salary = salary 
+        super().__init__(name)
+    def __str__(self):
+        return f"E`s salary :  {self.salary}, E`s name : {self.name}"
+
+coder = Employee("JOhn", 1200)
+
+print(coder)   
+
+
+11_ex 
+
+class Bird:
+    def fly(self):
+        print("I am flying ... yuhuuuu")
+
+class Parot(Bird):
+    def fly(self):
+        super().fly()     #super class dan method chaqirganda uni child class dagi boshqa methodni ichiga yozish kerak 
+        print("biz qondik")  
+
+b1 = Parot()
+b1.fly()
+
+
+12/13_ex
+
+class Parent:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def __str__(self):
+        return f"NAME [{self.name.upper()}], age: {self.age} year-old"  
+    
+class Child(Parent):
+    def __init__(self, name, age, height, status):
+        self.height = height
+        self.status = status
+        super().__init__(name, age)
+
+   # def __str__(self):
+   #     return  f"NAME [{self.name.lower()}], Age: {self.age} years old, height - {self.height}, status - {self.status}"
+
+Guy = Child("Max", 20, 178, "student")
+
+print(Guy)
+
+
+14_ex
+
+class Tree:
+    def __init__(self, name):
+        self.name = name
+    def get_info(self):
+        print(f"{self.name}")
+
+class Archa(Tree):
+    def __init__(self, name):
+        super().__init__(name)
+
+archa = Archa("Yangi_yil_daraxti")
+
+archa.get_info()
+print(archa.name) 
+
+15/16_ex 
+
+class Animal:
+    pass
+class Mammal(Animal):
+    pass
+class Dog(Mammal):
+    pass
+
+print(issubclass(Dog, Mammal))  #True     
+print(issubclass(Dog, Animal))  #True
+
+print(isinstance(Dog, Mammal))  #False
+print(isinstance(Dog, Animal))  #False
+
+17_ex
+
+class Animal:
+    pass
+class Mammal(Animal):
+    pass
+class Dog(Mammal):
+    pass
+
+dog = Dog()
+
+print(isinstance(dog, Dog))     #True
+print(isinstance(dog, Mammal))  #True
+print(isinstance(dog, Animal))  #True
+
+# Issubclass means -> {Is that class child of That class ?}
+# Isinstance means -> {Is that object belongs to That class ?}  answer type is boolean
+
+
+
+18_ex
+
+class Emee:
+    def describe(self):
+        print("Good employee, works honestly")
+class Manager(Emee):
+    def describe(self):
+        print("He is the best employee in our company, we proud of him!")
+
+Tom = Manager()
+
+Tom.describe() 
+
+
+
+19_ex
+
+class Shape:
+    def __init__(self, n):
+        self.n = n
+    def area(self):
+        return self.n
+class Circle(Shape):
+    def area(self):
+        return self.n*self.n*3.1415
+    
+class Square(Shape):
+    def area(self):
+        return self.n*self.n 
+    
+circ = Circle(3)
+sqr = Square(3)
+
+print(circ.area())
+print(sqr.area())
+
+20_ex '''
+
+class Device:
+    def status(self):
+        return "it is device"
+class Phone(Device):
+    def status(self):
+        print("It is phone`s.....status")
+
+class Laptop(Device):
+    def status(self):
+        print("It is laptop`s....status")
+
+redmi = Phone()
+vivo = Laptop()
+
+redmi.status()
+vivo.status()
