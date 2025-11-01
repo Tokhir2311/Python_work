@@ -1061,7 +1061,7 @@ class D(B, C):
 
 print(D.__mro__)  
 
-27_ex_v1
+27/28_ex_v1
 
 class A:
     def msg(self):
@@ -1109,5 +1109,261 @@ b.msg()
 
 
 
-28_ex '''
+29/30_ex 
 
+class A:
+    def __init__(self):
+        pass
+class B(A):
+    def __init__(self):
+        pass
+class D(B):
+    def __init__(self):
+        super().__init__()
+    def get(self):                      ????????????
+        print(D.__mro__)                ????????????
+
+d = D()
+
+d.get()
+
+31 
+
+class Dog:
+    def __init__(self):
+        pass
+    def sound(self):
+        return "Woof, woof"
+    
+class Cat:
+    def __init__(self):
+        pass
+    def sound(self):
+        return "Miyov"
+class Cow:
+    def __init__(self):
+        pass
+    def sound(self):
+        return "Muuuuu"
+dog = Dog()
+cat = Cat()
+cow = Cow()
+ls = [dog, cat, cow]
+for i in range(len(ls)):
+    print(ls[i].sound())
+
+32_ex 
+
+class ASos:
+    def __init__(self):
+        pass
+    def sound(self):
+        print("Ovoz")
+class Cat(ASos):
+    def sound(self):
+        print ("Miyov")
+class Dog(ASos):
+    def sound(self):
+        print ("Vouv")
+
+def animal_s(animal):
+    return animal.sound()
+
+cat = Cat()
+dog = Dog()
+
+animal_s(cat)
+animal_s(dog)
+
+34_ex  33-like is solved
+
+class Car:
+    def drive(self):
+        print("you can drive up to 210 km/h")
+
+class Bike:
+    def drive(self):
+        print("You can drive up to 25 km/h")
+
+
+bmw = Car()
+bmw.drive()
+
+
+ural = Bike()
+ural.drive()
+
+ 
+35_ex 
+
+class Veh:
+    def act(self):
+        print("this is vehicle")
+
+class Anim:
+    def act(self):
+        print("this is animal")
+class Electry:
+    def act(self):
+        print("this is item")
+
+car = Veh()
+cat = Anim()
+robot = Electry()
+
+ls = [car, cat, robot]
+for i in range(len(ls)):
+    ls[i].act() 
+    
+36_ex 
+class Duck:
+    def quack(self):
+        print("quaaaaaaaaaack D")
+    def walk(self):
+        print("waaaaaaaaaaaalk D")
+class  Person:
+    def walk(self):
+        print("waaaaaaaaaaaalk P")
+    def quack(self):
+        print("quaaaaaaaaaack P")
+
+hum1 = Person()
+duk1 = Duck()
+
+def make_it_quack(obj):
+    return obj.quack()
+
+make_it_quack(hum1)
+make_it_quack(duk1)
+
+37      ??????????????????????????????????????????????????????????????????????????????
+
+38_ex 
+
+class Dog:
+    def sound(self):
+        print("Woof")
+class Cat:
+    def voice(self):
+        print("miuuu")
+
+dog1 = Dog()
+dog2 = Dog()
+
+cat1 = Cat()
+cat2 = Cat()
+
+ls = [dog1, dog2, cat1, cat2]
+
+for i in ls:
+    if hasattr(i, "sound"):
+        i.sound()
+
+39_ex
+
+class Wifi:
+    def connect(self):
+        print("It is connected via wifi")
+
+class Ethernet:
+    def connect(self):
+        print("It is connected via ethernet")
+
+ether = Ethernet()
+wifi6 = Wifi()
+
+def connect_type(object)->str:
+    return object.connect()
+
+connect_type(ether)
+connect_type(wifi6)
+
+40_ex 
+
+class A:
+    def spec(self):
+        print("This is special")
+class B:
+    def notspec(self):
+        print("oh no,,")
+
+
+obyekt1 = A()
+obyekt2 = A()
+obyekt3 = B()
+
+def checker(obj):
+    if hasattr(obj, "spec") or isinstance(obj, A):
+        obj.spec()
+        print(f"object`s place and class {obj}")
+
+
+checker(obyekt1)
+checker(obyekt2)
+checker(obyekt3)
+
+41_ex 
+
+class Warrior:
+    def attack(self):
+        print("I'm warrior, I have a sword")
+
+class Mage:
+    def attack(self):
+        print("I'm mage, I use a magic ")
+
+class Archer:
+    def attack(self):
+        print("I'm Archer, I throw arrows")
+
+user1 = Warrior()
+user2 = Mage()
+user3 = Archer()
+ls = [user1, user2, user3]
+for i in ls:
+    i.attack()
+
+43_ex 
+
+class Notification:
+    def send(self):
+        print("Sender funk")
+
+class Email(Notification):
+    def send(self):
+        print("we need internet 'cause it is email msg")
+class Sms(Notification):
+    def send(self):
+        print("please, be consider. we are sending important msges")
+
+phone = Sms()
+phone.send()
+
+laptop = Email()
+laptop.send()
+
+44_ex #asks
+
+56_ex
+'''
+
+class Emp:
+    def work(self):
+        return "general work"
+
+class Dev(Emp):
+    def work(self):
+        return "Code writing ..."
+
+class Mang(Emp):
+    def work(self):
+        return "Organizing works..."
+
+
+w1 = Dev()
+w2=Mang()
+w3= Dev()
+w4 = Mang()
+ls = [w1, w2, w3, w4]
+for i in ls:
+    print(i.work())
