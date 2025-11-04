@@ -1047,6 +1047,7 @@ class Person:
         return False
 print(Person.check_em("any@gmail.com"))
 
+==============================================================================getr, settr
 
 
 class Temp:
@@ -1055,7 +1056,7 @@ class Temp:
 
 print(Temp.convert(12),"*C" ) 
 
-'''
+
 
 class Trang:
     def check_trang(a, b, c):
@@ -1065,9 +1066,57 @@ class Trang:
         
 print(Trang.check_trang(3, 4, 17))
 
+class Temprature:
+    def __init__(self,celius):     #Asrorniki
+        self.__celius=celius
+    def get_(self,):
+        return self.__celius
+    def set_(self,value):
+        self.__celius=value
+f1=Temprature(25)
+print(f1.get_())
+f1.set_(34)
+print(f1.get_())
 
 
 
+18_ex
 
 
+class Temp:
+    def __init__(self, grade):
+        self._celsius = grade
 
+    def get_c(self):
+        return self._celsius
+    def set_c(self, deg):
+        self._celsius = deg
+
+    def Get_far(self):
+        return self._celsius* 1.8 + 32
+    
+s = Temp(12)
+
+print(s.Get_far()) 
+
+19_ex
+
+class Student:
+    def __init__(self, mark):
+        self.__marks = mark
+    def get_m(self):
+        return self.__marks
+    def set_m(self, new_mark):
+        self.__marks = new_mark
+        if new_mark in range(0, 101):
+            self.__marks = new_mark
+        else:
+            return "This score is out of range!!!"
+        
+mark = Student(30)
+print(mark.get_m())
+mark.set_m(55) 
+print(mark.get_m())
+print(mark.set_m(-101))
+
+20_ex '''

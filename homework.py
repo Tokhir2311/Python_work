@@ -997,7 +997,7 @@ class Cat:
 class Dat(Dog, Cat):
     pass
 
-print(Dat.__mro__)
+print(Dat.__mro__)  # print(Dat.mro())
  
 24_ex
 
@@ -1015,7 +1015,7 @@ class LogBase(Logabe, Database):
 f = LogBase()
 f.log()
 f.saver()
-# bith of them working......
+# both of them working......
 
 
 25_ex
@@ -1120,8 +1120,8 @@ class B(A):
 class D(B):
     def __init__(self):
         super().__init__()
-    def get(self):                      ????????????
-        print(D.__mro__)                ????????????
+    def get(self):                      ???????????? # 29 done 
+        print(D.__mro__)                ???????????? # 30 done
 
 d = D()
 
@@ -1236,7 +1236,7 @@ def make_it_quack(obj):
 make_it_quack(hum1)
 make_it_quack(duk1)
 
-37      ??????????????????????????????????????????????????????????????????????????????
+37          ???????????????? SOLVED ??????????????????????   #Duck typing
 
 38_ex 
 
@@ -1343,9 +1343,35 @@ laptop = Email()
 laptop.send()
 
 44_ex #asks
+45_ex
+
+class Point:
+    def __init__(self,x, y):
+        self.x = x
+        self.y = y
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    def __str__(self):
+        return f"Point x : {self.x}, y : {self.y} "
+    
+p1 = Point(1, 0)
+p2 = Point(3, -1)
+
+resp = p1 + p2
+print(resp)
+
+48_ex 
+
+class Student:
+    def __init__(self,name,grade):
+        self.name = name
+        self.grade = grade
+    def __lt__(self,other):
+        self.garde < other.grade 
+    def __str__(self):
+        return f"{self.garde}, {self.name}"
 
 56_ex
-'''
 
 class Emp:
     def work(self):
@@ -1367,3 +1393,59 @@ w4 = Mang()
 ls = [w1, w2, w3, w4]
 for i in ls:
     print(i.work())
+
+
+57_ex 
+
+class Shape:
+    def draw(self):
+        print(f"Drawing a {__class__.__name__}.....")
+
+class Circle(Shape):
+    def draw(self):
+        print(f"Drawing {__class__.__name__}.....")
+
+class Traingle(Shape):
+    def draw(self):
+        print(f"Drawing {__class__.__name__}.....")
+
+class Rectangle(Shape):
+    def draw(self):
+        print(f"Drawing {__class__.__name__}.....")
+
+c1 = Circle()
+t1 = Traingle()
+r1 = Rectangle()
+sh = Shape()
+
+sh.draw()
+c1.draw()
+t1.draw()
+r1.draw()
+
+
+======================================ENCAPSULATION=================================
+ex_1
+
+class Person:
+    def __init__(self, name, age):
+      self.name = name 
+      self.age = age
+
+    def __str__(self): 
+       return f"Customer`s name {self.name}, his/her age -> {self.age} y.o."
+   
+client1 = Person("Johnson", 33)
+client2 = Person("Mayk", 29)
+print(client1)
+print(client2)
+ 
+'''
+ex_2
+
+class Employee:
+    def __init__(self, salary):
+        self._salary = salary
+    
+mnger = Employee(1200)
+print(_Em__salary) 
