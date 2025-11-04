@@ -679,14 +679,14 @@ print(cat1 = Cat("miyav-miyov"))
 """
 
         
-        
-        
-        
-        
-        
-        
-        
-        
+import sys
+import module 
+
+
+
+print(sys.modules)
+print("++++++++++++")
+print(sys.path)       
         
         
         
