@@ -1449,3 +1449,5 @@ class Employee:
     
 mnger = Employee(1200)
 print(_Em__salary) 
+
+"new"
